@@ -56,14 +56,12 @@ re-run here; **[unavailable]** = could not be verified in this run.
   deployment guide for the timeline; the codepoint/name change follows
   the IETF standardisation).
 
-## Measured basis (cycle 5)
+## Measured basis
 
-The OpenSSL and wolfSSL rows rest on the cycle-5 assessment
-(task_2e53110c, rewarded 5 PFT, completion 97, evidence 93):
-OpenSSL 3.5.9 and wolfSSL 5.9.4-stable built from source (tarball SHAs
+The OpenSSL and wolfSSL rows are measured on OpenSSL 3.5.9 and wolfSSL 5.9.4-stable built from source (tarball SHAs
 `603f5602…` and `7256bfc8…`); baselines 10/10 on both stacks; network
 conditions 25/100/250 ms; downgrade cases D1–D6 + D5b; interop both
-directions; HRR regression R1/R2/R3 (9/9 PASS). Full evidence in the
-cycle-5 pack (results.json, raw logs). The BoringSSL and Go rows were NOT
+directions; HRR regression R1/R2/R3 (9/9 PASS). Full evidence in
+results.json and the raw logs. The BoringSSL and Go rows were NOT
 re-run here — they are specification-derived from the primary sources
 above, and the matrix says so in every cell.

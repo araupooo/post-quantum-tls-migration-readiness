@@ -1,7 +1,7 @@
 # Claim-to-evidence index — Post-Quantum TLS Migration Readiness Pack
 
 Labels: **[measured]** = reproduced by a script in this pack (or in the
-cycle-5 pack it builds on) with the raw output saved; **[specification-
+assessment pack it builds on) with the raw output saved; **[specification-
 derived]** = follows from a cited primary source; **[unavailable]** =
 could not be tested in this environment, stated honestly rather than
 claimed.

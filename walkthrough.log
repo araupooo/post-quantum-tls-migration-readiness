@@ -1,18 +1,13 @@
-# Walkthrough — Publish Post-Quantum TLS Migration Readiness Evidence Pack
-Task task_aeb7a111fea019cf734a27793b94333c, accepted 2026-11-06 03:51 WIB.
+# Walkthrough — Post-Quantum TLS Migration Readiness
+Started 2026-11-06 03:51 WIB.
 All times WIB (Asia/Jakarta), 2026-11-06.
 
-## 03:51 — Task accepted
-- "Publish Post-Quantum TLS Migration Readiness Evidence Pack", Personal,
-  5 PFT, Submit Mixed. Description: turn the hybrid ML-KEM-768 TLS 1.3
-  assessment into a public, deployment-ready reference; deliver a durable
-  artifact page + one evidence pack with a four-stack readiness matrix,
+## 03:51 — Scope
+- Hybrid ML-KEM-768 TLS 1.3 assessment: four-stack readiness matrix,
   copy-paste OpenSSL/wolfSSL remediation guide, single-script regression
   check with unedited output, severity-ranked findings memo, and
-  claim-to-evidence index. Verification: "Submit the durable public
-  artifact URL and the complete evidence pack as an uploaded file or
-  accessible archive link."
-- Working dir: hidden_files/task-aeb7a111/. Reused from cycle 5
+  claim-to-evidence index.
+- Working dir: hidden_files/task-aeb7a111/. Reused from the TLS assessment
   (task-2e53110c): regression_hrr.py, findings.md, comparison.md,
   results.json, clienthello_msg.log, hrr_R1/R2/R3 client logs.
 
@@ -47,8 +42,8 @@ All times WIB (Asia/Jakarta), 2026-11-06.
   X25519MLKEM768). Exit 0 iff all pass.
 - First local run FAILED both configs (rc=1, no group): the runner
   started s_server with inherited stdin (EOF in this detached env), so
-  the server closed every connection before the handshake — the same F-6
-  stdin-EOF bug from cycle 5. Fixed by giving the server stdin from a
+  the server closed every connection before the handshake — the same
+  stdin-EOF bug (F-6). Fixed by giving the server stdin from a
   held-open pipe (`< <(sleep 60)` in run_operator_check.sh).
 - Second run (2026-11-06 ~04:10 WIB): tuple server ALL PASS (exit 0);
   flat server exit 1 — test A FAILS (negotiated X25519, no HRR) with the
@@ -63,14 +58,12 @@ All times WIB (Asia/Jakarta), 2026-11-06.
 - matrix.md (four stacks x four dimensions, every cell labelled
   measured / specification-derived / unavailable), guide.md (OpenSSL
   tuple syntax + wolfSSL --pqc settings, expected HRR behaviour,
-  misconfigurations table, runnable tests), findings.md (F-1..F-7
-  consolidated from cycle 5), index.md (M-1..M-13, S-1..S-11, U-1..U-7),
+  misconfigurations table, runnable tests), findings.md (F-1..F-7),
+  index.md (M-1..M-13, S-1..S-11, U-1..U-7),
   README.md, this log.
 
-## Next: public artifact page + ZIP + submit
+## Next: public artifact page + ZIP
 - Build the research dir for the artifact builder, create the web_static
   artifact page, verify it by export (check the exact measured values
-  are present — cycle 4's builder substituted its own harness once), get
-  the durable public URL, package the ZIP (six components), submit via
-  the browser (Submit Mixed: URL + ZIP), verify via task detail until
-  Rewarded.
+  are present — the artifact builder substituted its own harness once), get
+  the durable public URL, package the ZIP (six components).

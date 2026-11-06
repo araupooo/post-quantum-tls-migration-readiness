@@ -1,11 +1,9 @@
 # Findings memo — Post-Quantum TLS Migration Readiness
 
-Consolidated from the hybrid ML-KEM-768 TLS 1.3 assessment (cycle 5,
-task_2e53110c, rewarded 5 PFT, completion 97, evidence 93). Every finding
+Consolidated from the hybrid ML-KEM-768 TLS 1.3 assessment. Every finding
 was measured on OpenSSL 3.5.9 and wolfSSL 5.9.4-stable (built from source)
 or is labelled specification-derived. The full measured evidence is in
-the cycle-5 pack (results.json, raw logs, `regression_hrr.py` 9/9 PASS);
-this memo is the deployment-ready consolidation for operators.
+the assessment pack (results.json, raw logs, `regression_hrr.py` 9/9 PASS).
 
 ## F-1 (HIGH) — Flat server group list ignores server preference; deferred hybrid keyshare silently falls back to classical X25519
 

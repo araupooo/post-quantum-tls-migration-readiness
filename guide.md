@@ -3,7 +3,7 @@
 Copy-paste server settings for the F-1 remediation, the HelloRetryRequest
 behaviour to expect, the misconfigurations to avoid, and a runnable test
 for every claim. All commands were run against OpenSSL 3.5.9 and wolfSSL
-5.9.4-stable (built from source, cycle 5); the exact outputs are in
+5.9.4-stable (built from source); the exact outputs are in
 `outputs/raw/`.
 
 ## 1. OpenSSL 3.5.9 — use the tuple syntax

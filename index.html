@@ -273,8 +273,8 @@
         <p class="kicker">TLS 1.3 · Hybrid post-quantum key exchange · Evidence pack</p>
         <h1>Post-Quantum TLS Migration Readiness</h1>
         <p class="lede">
-          A deployment-ready, independently verifiable reference for the hybrid
-          <strong>X25519MLKEM768</strong> key exchange. The headline result: on OpenSSL, a
+          Hybrid <strong>X25519MLKEM768</strong> key exchange in TLS 1.3: group-list behaviour,
+          HelloRetryRequest, and measured results. The headline result: on OpenSSL, a
           <strong>flat</strong> server group list silently lets the client&rsquo;s order decide — a client
           that supports the hybrid but defers its keyshare lands on classical X25519 with no error and
           no HelloRetryRequest. The <strong>tuple</strong> group list
@@ -938,8 +938,8 @@ if __name__ == &quot;__main__&quot;:
 
       <footer class="doc">
         <p>
-          Post-Quantum TLS Migration Readiness — a fixed, inspectable snapshot of the cycle-5 hybrid
-          ML-KEM-768 assessment and its evidence pack. Measured values are reproduced verbatim from the
+          Post-Quantum TLS Migration Readiness — a fixed snapshot of the hybrid
+          ML-KEM-768 assessment. Measured values are reproduced verbatim from the
           assessment outputs; specification-derived and unavailable claims are labelled as such wherever
           they appear. Verify any claim yourself: download the pack, run
           <code>operator_check.py</code> against your own server, and compare.
